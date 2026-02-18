@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+<title>
+
+  {% block title %}
+  
+  {% endblock %}
+
+</title>
+
+
+<link rel="stylesheet" href="{% static 'navigation/style.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    {% include 'navigation/includes/header.html' %}
+
+    <!-- Main Content -->
+     {% block content %}
+
+     {% endblock %}
+
+
+<!-- <ul>
+  <li><a href="{% url 'navigation:home' %}">Home</a></li>
+  <li><a href="{% url 'navigation:news' %}">News</a></li>
+  <li><a href="{% url 'navigation:about' %}">About</a></li>
+  <li><a href="{% url 'navigation:contact' %}">Contact</a></li>
+
+</ul> -->
+</body>
+</html>
